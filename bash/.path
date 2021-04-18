@@ -17,9 +17,6 @@ PATH="node_modules/.bin:vendor/bin:$HOME/.node-global-modules/bin:$PATH"
 PATH="$GOPATH/bin:$PATH"
 PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
-# rbenv
-PATH="$HOME/.rbenv/bin:$PATH"
-
 # mysql@5.7
 PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 

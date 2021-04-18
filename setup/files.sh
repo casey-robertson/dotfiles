@@ -21,7 +21,6 @@ declare -a dotfilesdirarray=(
 
 # Declare array of directories we want to symlink files from.
 declare -a dotfilesfilearray=(
-  "$dotfilesdir/ack"
   "$dotfilesdir/asdf"
   "$dotfilesdir/bash"
   "$dotfilesdir/curl"
@@ -29,10 +28,8 @@ declare -a dotfilesfilearray=(
   "$dotfilesdir/git"
   "$dotfilesdir/mackup"
   "$dotfilesdir/node"
-  "$dotfilesdir/ruby"
   "$dotfilesdir/screen"
   "$dotfilesdir/shell"
-  "$dotfilesdir/tmux"
   "$dotfilesdir/vim"
   "$dotfilesdir/wget"
 )

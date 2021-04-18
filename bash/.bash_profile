@@ -89,8 +89,4 @@ fi
 if hash pyenv-virtualenv-init 2>/dev/null; then
   eval "$(pyenv virtualenv-init -)";
 fi
-
-# rbenv
-if hash rbenv 2>/dev/null; then
-  eval "$(rbenv init -)";
-fi
+eval "$(/opt/homebrew/bin/brew shellenv)"

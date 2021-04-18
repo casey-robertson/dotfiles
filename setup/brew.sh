@@ -31,7 +31,8 @@ if $brewinstall; then
     # note: if your /usr/local is locked down (like at Google), you can do this to place everything in ~/.homebrew
     # mkdir "$HOME/.homebrew" && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
     # then add this to your path: export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     print_result $? 'Install Homebrew.'
   else
@@ -73,10 +74,10 @@ if $brewinstall; then
 
   # zsh
   brew install zsh
-  brew install zsh-completion
+  # brew install zsh-completion
 
   # Install `wget` with IRI support.
-  brew install wget --with-iri
+  brew install wget
 
   # Install GnuPG to enable PGP-signing commits.
   brew install gnupg
@@ -91,11 +92,9 @@ if $brewinstall; then
 
   # Key tools.
   brew install git
-  brew install tmux
   brew install z
 
   # OTHER USEFUL UTILS
-  brew install ack
   brew install advancecomp
   brew install brew-cask-completion
   brew install cloc
@@ -130,6 +129,7 @@ if $brewinstall; then
   brew install spark
   brew install speedtest-cli
   brew install ssh-copy-id
+  brew install svn
   brew install terminal-notifier
   brew install the_silver_searcher
   brew install trash-cli
@@ -147,24 +147,19 @@ if $brewinstall; then
   brew install asdf
   # brew install n
   brew install yarn
-  # brew install go
+  brew install go
   # brew install homebrew/php/php56 --with-gmp
   brew install pyenv
   brew install pyenv-virtualenv
-  brew install rbenv
-  brew install ruby-build
-  brew install rbenv-gemset
 
   # DATABASES
   brew install postgresql
-  brew install mongodb
   brew install mysql@5.7
   brew install redis
 
   # DEVOPS
   brew install awscli
-  brew install nginx
-  brew install puma/puma/puma-dev
+  brew install pulumi
 
   # docker
   # brew install docker
@@ -186,84 +181,84 @@ if $brewinstall; then
   # FONTS
   running "Installing fonts"
 
-  brew tap caskroom/fonts
+  brew tap homebrew/cask-fonts
 
-  brew cask install font-domine
-  brew cask install font-droid-sans
-  brew cask install font-droid-sans-mono
-  brew cask install font-fira-code
-  brew cask install font-fira-sans
-  brew cask install font-fontawesome
-  brew cask install font-inconsolata
-  brew cask install font-lato
-  brew cask install font-open-sans
-  brew cask install font-roboto
-  brew cask install font-source-code-pro
-  brew cask install font-source-sans-pro
-  brew cask install font-ubuntu
+  brew install --cask font-domine
+  brew install --cask font-droid-sans
+  brew install --cask font-droid-sans-mono
+  brew install --cask font-fira-code
+  brew install --cask font-fira-sans
+  brew install --cask font-fontawesome
+  brew install --cask font-inconsolata
+  brew install --cask font-lato
+  brew install --cask font-open-sans
+  brew install --cask font-roboto
+  brew install --cask font-source-code-pro
+  brew install --cask font-source-sans-pro
+  brew install --cask font-ubuntu
 
   running "Installing cask apps"
 
   # APPLICATIONS
-  brew tap caskroom/cask
-  brew tap caskroom/versions
+  brew tap homebrew/cask
+  brew tap homebrew/cask-versions
 
   # Security
-  brew cask install dashlane
-  brew cask install keybase
-  brew cask install gpgtools
-  brew cask install tunnelblick
+  brew install --cask dashlane
+  brew install --cask keybase
+  brew install --cask gpgtools
+  brew install --cask tunnelblick
 
   # General
-  brew cask install caffeine
-  brew cask install diskwave
-  brew cask install dropbox
-  brew cask install firefox
-  brew cask install g-desktop-suite
-  brew cask install google-chrome
-  brew cask install grammarly
-  brew cask install iterm2
-  brew cask install slack
-  brew cask install spectacle
-  brew cask install spotify
-  brew cask install vlc
-  # brew cask install zoomus
+  brew install --cask caffeine
+  brew install --cask diskwave
+  brew install --cask dropbox
+  brew install --cask firefox
+  brew install --cask g-desktop-suite
+  brew install --cask google-chrome
+  brew install --cask grammarly
+  brew install --cask iterm2
+  brew install --cask slack
+  brew install --cask spectacle
+  brew install --cask spotify
+  brew install --cask vlc
+  # brew install --cask zoomus
 
   # Design
-  brew cask install abstract
-  # brew cask install sketch
-  # brew cask install zeplin
+  brew install --cask abstract
+  # brew install --cask sketch
+  # brew install --cask zeplin
 
   # Development
-  brew cask install dash
-  brew cask install google-chrome-canary
-  brew cask install graphiql
-  brew cask install imagealpha
-  brew cask install imageoptim
-  brew cask install ngrok
-  brew cask install sequel-pro
-  brew cask install visual-studio-code
+  brew install --cask dash
+  brew install --cask google-chrome-canary
+  brew install --cask graphiql
+  brew install --cask imagealpha
+  brew install --cask imageoptim
+  brew install --cask ngrok
+  brew install --cask sequel-pro
+  brew install --cask visual-studio-code
 
   # DevOps
-  brew cask install aws-vault
+  brew install --cask aws-vault
 
   # VM
-  # brew cask install virtualbox
-  # brew cask install vagrant
+  # brew install --cask virtualbox
+  # brew install --cask vagrant
 
   # Quicklook
-  brew cask install qlcolorcode
-  brew cask install qlstephen
-  brew cask install qlmarkdown
-  brew cask install quicklook-json
-  brew cask install qlprettypatch
-  brew cask install quicklook-csv
-  # brew cask install betterzipql
-  # brew cask install qlimagesize
-  brew cask install webpquicklook
-  # brew cask install suspicious-package
-  brew cask install quicklookase
-  brew cask install qlvideo
+  brew install --cask qlcolorcode
+  brew install --cask qlstephen
+  brew install --cask qlmarkdown
+  brew install --cask quicklook-json
+  brew install --cask qlprettypatch
+  brew install --cask quicklook-csv
+  # brew install --cask betterzipql
+  # brew install --cask qlimagesize
+  brew install --cask webpquicklook
+  # brew install --cask suspicious-package
+  brew install --cask quicklookase
+  brew install --cask qlvideo
 
   # Install Mac App Store Applications.
   # requires: brew install mas

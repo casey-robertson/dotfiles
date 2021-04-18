@@ -7,8 +7,7 @@ There's a huge amount of features and tools to cover in any sort of usage guide,
 1. [Bash](#bash)
 2. [Git](#git)
 3. [Vim](#vim)
-4. [tmux](#tmux)
-5. [Other](#other)
+4. [Other](#other)
 
 ## Bash
 
@@ -148,18 +147,6 @@ Nice settings from [`.vimrc`](../vim/.vimrc), check the comments.
 - [`nerdtree`](https://github.com/scrooloose/nerdtree) — tree explorer, toggle with `,d` (find with `,f`)
 - [`ctrlp.vim`](https://github.com/ctrlpvim/ctrlp.vim) — fuzzy finder, run using `,t` (buffer find with `,b`)
 - Local config using `~/.vimrc.local`
-
-## tmux
-
-Settings from [`.tmux.conf`](../tmux/.tmux.conf), see comments.
-
-- Prefix `CTRL+a` rather than `CTRL+b`
-- Pane switching with prefix `h`, `j`, `k`, `l`
-- Split windows with prefix `"` and `%`
-- New window with prefix `c`
-- Custom status bar
-- [`reattach-to-user-namespace`](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard) for macOS clipboard access
-- Local config using `~/.tmux.conf.local`
 
 ## Other
 

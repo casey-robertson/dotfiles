@@ -36,7 +36,6 @@ From directories declared in `$dotfilesfilearray`
 - `~/.dircolors`
 - `~/.hushlogin`
 - `~/.tool-versions`
-- `~/.tmux.conf`
 - `~/.vimrc`
 - `~/.wgetrc`
 

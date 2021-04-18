@@ -208,7 +208,7 @@
 
 [commit]
   # https://help.github.com/articles/signing-commits-using-gpg/
-  gpgsign = true
+  gpgsign = false
 
 	template = ~/.git-template-commit
 
@@ -291,3 +291,6 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[user]
+	email = casey.robertson@gmail.com
+	name = Casey Robertson

@@ -87,7 +87,7 @@ alias hosts='sudo $EDITOR /etc/hosts'
 # Get week number
 alias week='date +%V'
 
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+# Get macOS Software Updates, and update Homebrew, npm, and their installed packages
 alias update='\
   sudo softwareupdate -i -a; \
   brew update; \
@@ -96,9 +96,6 @@ alias update='\
   npm install npm -g; \
   npm update -g; \
   npm cache clean; \
-  sudo gem update --system; \
-  sudo gem update; \
-  sudo gem cleanup; \
 '
 
 # Google Chrome

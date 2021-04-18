@@ -1,8 +1,6 @@
 # `$HOME sweet ~/`
 
-Your dotfiles are how you personalize your system.
-
-These are mine. Built for Mac OS X. Certified lit :fire: :fire: :fire:
+Personalized dotfiles
 
 **Rationale**
 
@@ -12,7 +10,7 @@ Setting up a new developer machine can be **ad-hoc**, **manual**, and **time-con
 
 ## What's in the box?
 
-Setup and config for bash, curl, git, node, ruby, tmux, vim, brew, apps, dev environments and more — there's a lot to list so please see the full [Package Contents](docs/package-contents.md).
+Setup and config for bash, curl, git, node, vim, brew, apps, dev environments and more — there's a lot to list so please see the full [Package Contents](docs/package-contents.md).
 
 ### Highlights
 
@@ -20,15 +18,13 @@ Setup and config for bash, curl, git, node, ruby, tmux, vim, brew, apps, dev env
 - **Awesome bash setup**: [aliases](bash/.aliases), [functions](bash/.functions), [z](https://github.com/rupa/z), smart prompt, tab completion and more.
 - **Git done right**: [aliases](git/.gitconfig), [hub](https://hub.github.com), [git-friendly](https://github.com/jamiew/git-friendly) and custom scripts.
 - **Vim for the win** via [vim-pathogen](https://github.com/tpope/vim-pathogen), [vim-sensible](https://github.com/tpope/vim-sensible) and other plugins.
-- **tmux to the max** using [config](tmux/.tmux.conf) and shortcuts.
 - **Homebrew package manager** to install tools, applications and fonts.
 - **Must-have tools**: GNU core utils, gnupg, [quick look plugins](https://github.com/sindresorhus/quick-look-plugins), [wifi-password](https://github.com/rauchg/wifi-password), etc.
 - **Must-have apps**: Caffeine, Dropbox, Chrome, [Spectacle](https://www.spectacleapp.com), Spotify, etc.
 - **Developer tools**:  AWS CLI, Docker, MySQL, Postgres, Python, Yarn, etc.
 - **Developer apps**: iTerm2, Slack, VS Code, etc.
 - **Node development** using [asdf](https://github.com/asdf-vm/asdf) with global package installer.
-- **Ruby development** using [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build).
-- **Goodies in [bin](bin)** including git and tmux tools.
+- **Goodies in [bin](bin)** including git tools.
 
 Also, last but not least:
 
@@ -47,14 +43,13 @@ Sounds good? Let's go.
 Clone the repository wherever you prefer — I like to store the files in **`~/projects/dotfiles`** and then symlink that to `~/dotfiles` (see [Symlinks](#step-5-symlinks)).
 
 ```bash
-$ git clone https://github.com/aaronbates/dotfiles.git    
+$ git clone https://github.com/casey-robertson/dotfiles.git    
 ```
 
 ## Structure
 
 To keep the project organised all files are split into directories and grouped around topic areas:
 
-- **`ack`** — ack config
 - **`bash`** — bash specific config
 - **`bin`** — various binaries, symlinked to `~/bin` and in `$PATH`
 - **`curl`** — curl config
@@ -65,12 +60,10 @@ To keep the project organised all files are split into directories and grouped a
 - **`.mackup`** — `.cfg` files for custom apps, symlinked to `~/.mackup`
 - **`macos`** — macOS prefs
 - **`node`** — node config
-- **`ruby`** — ruby config
 - **`screen`** — screen config
 - **`setup`** — install, migrate and backup scripts
 - **`shell`** — general shell config
 - **`terminal`** — terminal themes
-- **`tmux`** — tmux config
 - **`vim`** — vim config
 - **`wget`** — wget config
 - **`/`** — project files and setup script
@@ -300,10 +293,6 @@ Customise your Git config by creating a `~/.gitconfig.local` file which will ext
 
 Customise your Vim config by creating a `~/.vimrc.local` file which will extend [`.vimrc`](vim/.vimrc).
 
-### Customising tmux
-
-Customise your tmux config by creating a `~/.tmux.conf.local` file which will extend [`.tmux.conf`](tmux/.tmux.conf).
-
 ## Fork
 
 **Feel free to fork this repo, hack around, and make it your own** :ok_hand:
@@ -376,7 +365,7 @@ While by no means a comprehensive backup solution, Mackup keeps things simple, c
 
 #### How I use Mackup
 
-I store on Dropbox and explicitly declare which apps to sync and which to ignore — anything handled by my dotfiles is ignored (bash, git, vim etc.)
+I store on iCloud and explicitly declare which apps to sync and which to ignore — anything handled by my dotfiles is ignored (bash, git, vim etc.)
 
 I backup a wide range of other applications including those containing credentials such as aws, gnupg and ssh. I also backup apps not natively supported using custom `.cfg` files. For example, to backup [Ulysses](https://ulyssesapp.com) (an amazing markdown writing app) I created a `~/.mackup` directory and placed a `ulysses.cfg` file inside:
 
@@ -422,39 +411,6 @@ A simple `$ mackup backup` saves everything to Dropbox and I can later `$ mackup
 
 These dotfiles symlink my Mackup config into `~/` — take a look :eyes:.
 
-### Migration
-
-In addition to setup, it's possible to use these dotfiles on an configured Mac system to migrate to a new machine using the [`setup/migrate.sh`](setup/migrate.sh) script.
-
-:warning: Caution is advised here — see the [Migration Guide](docs/migration.md) for more information.
-
-## Acknowledgements
-
-Credit, inspiration and thanks to:
-
-- [Dev Setup](https://github.com/donnemartin/dev-setup)
-- [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
-- [Mathias](https://github.com/mathiasbynens/dotfiles)
-- [Paul Irish](https://github.com/paulirish/dotfiles)
-- [Holman](https://github.com/holman/dotfiles)
-- [Mislav](https://github.com/mislav/dotfiles)
-- [Springload](https://github.com/springload/dotfiles)
-
-And too many others to name.
-
-## License
-
-[MIT](https://github.com/aaronbates/dotfiles/blob/master/LICENSE-MIT.txt) &copy; 2017 Aaron Bates ([http://aaronbates.me](http://aaronbates.me))
-
-## TODO
-
-- [ ] Install without Git
-- [ ] Take user info for custom config setup (name/email/url)
-- [ ] Add BATS test suite
-- [ ] Ruby config
-- [ ] Databases config
-- [ ] Devops config (VM, Docker)
-- [ ] Consider additional [vim plugins](https://github.com/square/maximum-awesome)
 
 ----
 
